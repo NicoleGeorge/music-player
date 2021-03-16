@@ -33,6 +33,15 @@ function playTrack() {
 
   audio.play();
 }
+// PAUSE TRACK FUNCTION
+
+function pauseTrack() {
+  musicContainer.classList.remove('play')
+  playBtn.querySelector('i.fas').classList.add('fa-play');
+  playBtn.querySelector('i.fas').classList.remove('fa-pause')
+
+  audio.pause();
+}
 
 // EVENT LISTENERS - PLAY, NEXR & PREV BUTTONS
 
@@ -40,7 +49,7 @@ playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play')
 
   if(isPlaying) {
-    pauseTrck()
+    pauseTrack()
   } else {
     playTrack()
   }
