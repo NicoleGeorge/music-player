@@ -13,7 +13,7 @@ const cover = document.getElementById('cover');
 const tracks = ['happy', 'falling', 'willow']
 
 // INDEXING TRACKS
-let trackIndex = 0;
+let trackIndex = 2;
 
 // LOAD TRACK DETAILS INTO DOM
 loadTrack(tracks[trackIndex]);
@@ -24,3 +24,24 @@ function loadTrack(track) {
   audio.src = `music/${track}.mp3`;
   cover.src = `images/${track}.jpg`;
 }
+
+// PLAY TRACK FUNCTION INTO
+function playTrack() {
+  musicContainer.classList.add('play')
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause')
+
+  audio.play();
+}
+
+// EVENT LISTENERS - PLAY, NEXR & PREV BUTTONS
+
+playBtn.addEventListener('click', () => {
+  const isPlaying = musicContainer.classList.contains('play')
+
+  if(isPlaying) {
+    pauseTrck()
+  } else {
+    playTrack()
+  }
+})
