@@ -9,6 +9,28 @@
   <title>Music Player App</title>
 </head>
 <body>
+  <h1>Music Player</h1>
+  <div class="music-container" id="music-container">
+    <div class="music-info">
+      <h4 id="title"></h4>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- audio section -->
+    <div src="music/taylor_willow.mp3" id="audio"></div>
+      <div class="img-container">
+        <img src="images/taylor_cover.jpg" alt="taylor swift willow cover" id="cover">
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+      </div>
+  </div>
   
   <script src="app.js"></script>
 </body>
