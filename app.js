@@ -43,6 +43,34 @@ function pauseTrack() {
   audio.pause();
 }
 
+// PREVIOUS TRACK FUNCTION
+
+function prevTrack() {
+  trackIndex--;
+
+  if(trackIndex < 0 ) {
+    trackIndex = tracks.length -1;
+  } 
+
+  loadTrack(tracks[trackIndex])
+
+  playTrack();
+}
+
+// NEXT TRACK FUNCTION
+
+function nextTrack() {
+  trackIndex++;
+
+  if(trackIndex > tracks.length -1 ) {
+    trackIndex = 0;
+  } 
+
+  loadTrack(tracks[trackIndex])
+
+  playTrack();
+}
+
 // EVENT LISTENERS - PLAY, NEXR & PREV BUTTONS
 
 playBtn.addEventListener('click', () => {
@@ -54,3 +82,8 @@ playBtn.addEventListener('click', () => {
     playTrack()
   }
 })
+
+// CHANGE TRACK EVEN LISTENERS
+
+prevBtn.addEventListener('click', prevTrack)
+nextBtn.addEventListener('click', nextTrack)
