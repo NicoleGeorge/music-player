@@ -110,5 +110,8 @@ nextBtn.addEventListener('click', nextTrack)
 audio.addEventListener('timeupdate', updateProgress)
 
 // PROGRESS BAR PERCENTAGE DISPLAY LISTENERS
-
 progressContainer.addEventListener('click', setProgress);
+
+// TRACK FINISHES
+
+audio.addEventListener('ended', nextTrack)
