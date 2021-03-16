@@ -71,6 +71,13 @@ function nextTrack() {
   playTrack();
 }
 
+// PROGRESS BAR FUNCTION 
+
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  console.log(duration, currentTime)
+}
+
 // EVENT LISTENERS - PLAY, NEXR & PREV BUTTONS
 
 playBtn.addEventListener('click', () => {
@@ -87,3 +94,7 @@ playBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', prevTrack)
 nextBtn.addEventListener('click', nextTrack)
+
+// TRACK PROGRESS UPDATE
+
+audio.addEventListener('timeupdate', updateProgress)
