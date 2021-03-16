@@ -79,6 +79,16 @@ function updateProgress(e) {
   progress.style.width = `${progressPercentage}%`
 }
 
+// SET PROGRESS BAR FUNCTION
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
 // EVENT LISTENERS - PLAY, NEXR & PREV BUTTONS
 
 playBtn.addEventListener('click', () => {
@@ -97,5 +107,8 @@ prevBtn.addEventListener('click', prevTrack)
 nextBtn.addEventListener('click', nextTrack)
 
 // TRACK PROGRESS UPDATE
-
 audio.addEventListener('timeupdate', updateProgress)
+
+// PROGRESS BAR PERCENTAGE DISPLAY LISTENERS
+
+progressContainer.addEventListener('click', setProgress);
