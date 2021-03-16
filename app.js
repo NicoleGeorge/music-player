@@ -10,7 +10,7 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 // SONG TITLES
-const tracks = ['happy', 'falling', 'willow']
+const tracks = ['happy', 'falling', 'willow', 'dancing on my own', 'just a girl', 'hit me baby', 'frozen', 'did it again', 'edge of seventeen', 'the kill']
 
 // INDEXING TRACKS
 let trackIndex = 2;
