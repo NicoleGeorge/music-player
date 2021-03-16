@@ -21,7 +21,7 @@ body {
 
 .music-container {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(252, 169, 168, 0.6);
   display: flex;
   padding: 20px 30px;
@@ -29,6 +29,8 @@ body {
   margin: 100px;
   z-index: 10;
 }
+
+/* SONG COVER STYLES */
 
 .img-container {
   position: relative;
@@ -61,6 +63,8 @@ body {
   }
 }
 
+/* NAV STYLES */
+
 .navigation {
   display: flex;
   align-items: center;
@@ -86,3 +90,32 @@ body {
 .action-btn:focus {
   outline: 0;
 }
+
+/* MUSIC INFO STYLES */
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin:0;
+}
+
+
+
+
